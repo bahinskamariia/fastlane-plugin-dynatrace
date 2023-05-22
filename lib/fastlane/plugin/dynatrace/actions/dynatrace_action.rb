@@ -76,7 +76,6 @@ module Fastlane
         command << "version=\"#{params[:version]}\""
         command << "symbolsfile=\"#{params[:symbolsfile]}\""
         command << "server=\"#{Helper::DynatraceHelper.without_trailing_slash(params[:server])}\""
-        command << "DTXLogLevel=ALL -verbose" if params[:debugMode] == true
         command << "forced=1" # if the file already exists
         command << "tempdir=\"#{params[:tempdir]}\"" if params[:tempdir]
 
